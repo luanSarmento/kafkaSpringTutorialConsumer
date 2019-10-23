@@ -1,0 +1,17 @@
+server:
+  port: 7778
+spring:
+  kafka:
+    binder:
+      replication-factor: 1
+    topic:
+      request-demo: request-demo
+      reply-demo: reply-demo
+      request-demo-2: request-demo-2
+      reply-demo-2: reply-demo-2
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: demoConsumerGroup
+      auto-offset-reset: earliest
+    producer:
+      bootstrap-servers: localhost:9092
